@@ -1,0 +1,877 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mistvale Tea Co. | Hill-grown tea, honestly made.</title>
+<meta name="description" content="Shop Mistvale Tea Co. for hill-grown black, green and herbal teas, plus a tea lover's gift sampler. Delivery across India.">
+<link rel="canonical" href="https://mistvale.example/">
+<meta property="og:title" content="Mistvale Tea Co. | Hill-grown tea, honestly made.">
+<meta property="og:description" content="A calm collection of black, green and herbal teas from Mistvale Tea Co.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mistvale.example/">
+<meta property="og:image" content="https://mistvale.example/images/hero.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mistvale Tea Co. | Hill-grown tea, honestly made.">
+<meta name="twitter:description" content="Shop Mistvale's collection of teas and the Tea Lover's Sampler Gift Box.">
+<meta name="twitter:image" content="https://mistvale.example/images/hero.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --tea:#1f3d2b;--leaf:#4f7942;--cream:#f6f1e7;--parchment:#ebe2cf;
+  --saffron:#d9962b;--ink:#1b1b1b;--error:#b3261e;--white:#fff;
+  --radius:12px;--shadow:0 12px 32px rgba(31,61,43,.10);--max:1200px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 16px/1.6 Manrope, sans-serif}
+body.no-scroll{overflow:hidden}
+img{max-width:100%;display:block}
+button,input,select{font:inherit}
+button{cursor:pointer}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--saffron);outline-offset:3px}
+.container{width:min(var(--max),calc(100% - 32px));margin-inline:auto}
+.skip-link{position:absolute;left:16px;top:-60px;background:var(--tea);color:var(--white);padding:12px 16px;border-radius:8px;z-index:1000}
+.skip-link:focus{top:16px}
+.announcement{background:var(--tea);color:var(--white);font-size:14px;text-align:center;padding:8px 16px}
+.header{position:sticky;top:0;z-index:40;background:rgba(246,241,231,.97);border-bottom:1px solid rgba(31,61,43,.12);backdrop-filter:blur(10px)}
+.header-inner{min-height:76px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:32px}
+.logo{width:170px;height:auto}
+.nav{display:flex;justify-content:center;gap:24px}
+.nav a{text-decoration:none;font-weight:600;font-size:14px;padding:8px 2px;border-bottom:2px solid transparent}
+.nav a:hover,.nav a:focus-visible{border-color:var(--leaf)}
+.header-actions{display:flex;align-items:center;gap:12px}
+.search-wrap{position:relative}
+.search-wrap label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.search{width:220px;min-height:44px;padding:10px 14px 10px 40px;border:1px solid rgba(31,61,43,.25);border-radius:var(--radius);background:var(--white);color:var(--ink)}
+.search-icon{position:absolute;left:13px;top:11px;color:var(--tea)}
+.icon-btn{min-width:44px;min-height:44px;border:1px solid rgba(31,61,43,.22);border-radius:var(--radius);background:transparent;color:var(--tea);display:inline-grid;place-items:center;position:relative}
+.icon-btn:hover{background:var(--parchment);transform:translateY(-2px)}
+.cart-count{position:absolute;right:-6px;top:-6px;min-width:21px;height:21px;padding:1px 5px;border-radius:999px;background:var(--saffron);color:var(--ink);font-size:12px;font-weight:700;display:grid;place-items:center}
+.hero{position:relative;min-height:560px;display:flex;align-items:center;overflow:hidden;background:var(--parchment)}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(246,241,231,.96) 0%,rgba(246,241,231,.78) 42%,rgba(246,241,231,.08) 72%);z-index:1}
+.hero-media{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-content{position:relative;z-index:2;padding:80px 0;max-width:650px}
+.eyebrow{color:var(--leaf);font-size:14px;font-weight:700;letter-spacing:.04em;margin:0 0 12px}
+h1,h2,h3{font-family:Fraunces,serif;color:var(--tea);line-height:1.15;margin:0 0 16px}
+h1{font-size:clamp(40px,6vw,64px);max-width:650px}
+h2{font-size:clamp(28px,4vw,40px)}
+h3{font-size:22px}
+.hero p{font-size:18px;max-width:590px;margin:0 0 28px}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{min-height:46px;padding:10px 18px;border-radius:var(--radius);border:1px solid transparent;font-weight:700;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;transition:transform .2s ease,background-color .2s ease,border-color .2s ease,box-shadow .2s ease,opacity .2s ease}
+.btn-primary{background:var(--tea);color:var(--white)}
+.btn-primary:hover{background:var(--leaf);transform:translateY(-2px);box-shadow:0 8px 20px rgba(31,61,43,.16)}
+.btn-secondary{background:transparent;color:var(--tea);border-color:var(--tea)}
+.btn-secondary:hover{background:var(--parchment);transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+.btn:disabled{opacity:.5;cursor:not-allowed;transform:none;box-shadow:none}
+.trust{background:var(--tea);color:var(--white)}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:24px 0}
+.trust-item{display:flex;gap:12px;align-items:flex-start}
+.trust-item svg{flex:none;color:var(--saffron);margin-top:3px}
+.trust-item strong{display:block;font-size:14px}
+.trust-item span{display:block;font-size:13px;opacity:.88}
+.section{padding:80px 0}
+.section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:28px}
+.section-head p{max-width:620px;margin:0;color:#444}
+.shop-controls{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;margin-bottom:24px}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.filter{min-height:42px;padding:8px 15px;border:1px solid rgba(31,61,43,.2);border-radius:999px;background:transparent;color:var(--tea);font-weight:600}
+.filter:hover{background:var(--parchment)}
+.filter.active{background:var(--tea);color:var(--white);border-color:var(--tea)}
+.sort-label{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600}
+select,input{border:1px solid rgba(31,61,43,.25);background:var(--white);color:var(--ink);border-radius:var(--radius);min-height:44px;padding:9px 12px}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.card{display:flex;flex-direction:column;background:var(--white);border:1px solid rgba(31,61,43,.10);border-radius:var(--radius);overflow:hidden;box-shadow:0 5px 18px rgba(31,61,43,.06);min-width:0;transition:transform .2s ease,box-shadow .2s ease}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.card-media{position:relative;background:var(--parchment);aspect-ratio:1/1;overflow:hidden}
+.card-media img{width:100%;height:100%;object-fit:cover;transition:transform .25s ease}
+.card:hover .card-media img{transform:scale(1.025)}
+.wish{position:absolute;right:12px;top:12px;width:42px;height:42px;border:0;border-radius:999px;background:rgba(246,241,231,.92);color:var(--tea);display:grid;place-items:center}
+.wish:hover{background:var(--white);transform:translateY(-2px)}
+.wish.is-saved{color:var(--saffron)}
+.badge{position:absolute;left:12px;top:12px;padding:5px 9px;border-radius:999px;background:var(--saffron);color:var(--ink);font-size:12px;font-weight:700}
+.card-body{display:flex;flex-direction:column;flex:1;padding:18px}
+.category{font-size:13px;color:var(--leaf);font-weight:700;margin-bottom:5px}
+.card h3{font-size:22px;margin-bottom:8px}
+.card-desc{font-size:14px;color:#454545;margin:0 0 14px}
+.rating{font-size:13px;color:var(--leaf);min-height:21px;margin-bottom:8px}
+.price-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding-top:10px}
+.price{font-size:19px;font-weight:700;color:var(--tea)}
+.card .btn{width:100%;margin-top:14px}
+.card .btn:disabled{background:#777;color:#fff;border-color:#777}
+.empty{grid-column:1/-1;padding:48px 16px;text-align:center;background:var(--parchment);border-radius:var(--radius)}
+.delivery{background:var(--parchment)}
+.delivery-box{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.delivery-form{background:var(--white);padding:28px;border-radius:var(--radius);box-shadow:var(--shadow)}
+.field{display:grid;gap:7px;margin-bottom:16px}
+.field label{font-weight:700;font-size:14px}
+.inline-form{display:flex;gap:10px}
+.inline-form input{flex:1;min-width:0}
+.form-message{font-size:14px;min-height:24px;margin-top:10px}
+.form-message.error{color:var(--error)}
+.form-message.success{color:var(--leaf)}
+.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.review{background:var(--white);padding:24px;border:1px solid rgba(31,61,43,.10);border-radius:var(--radius);box-shadow:0 5px 18px rgba(31,61,43,.05)}
+.review p{margin:0 0 16px;font-style:italic}
+.review cite{font-style:normal;font-weight:700;color:var(--tea);font-size:14px}
+.faq{background:var(--parchment)}
+.faq-list{max-width:900px;margin:0 auto}
+.faq-item{border-top:1px solid rgba(31,61,43,.18)}
+.faq-item:last-child{border-bottom:1px solid rgba(31,61,43,.18)}
+.faq-q{width:100%;padding:20px 0;border:0;background:none;text-align:left;color:var(--tea);font:600 18px/1.4 Manrope,sans-serif;display:flex;justify-content:space-between;gap:20px}
+.faq-q svg{flex:none;transition:transform .2s ease}
+.faq-item.open .faq-q svg{transform:rotate(180deg)}
+.faq-a{display:none;padding:0 42px 20px 0;color:#444}
+.faq-item.open .faq-a{display:block}
+.newsletter{background:var(--tea);color:var(--white)}
+.newsletter h2{color:var(--white)}
+.newsletter p{margin-top:0;max-width:620px}
+.newsletter-form{max-width:720px;display:flex;gap:10px}
+.newsletter-form input{flex:1}
+.newsletter .btn-secondary{border-color:var(--white);color:var(--white)}
+.newsletter .btn-secondary:hover{background:rgba(255,255,255,.1)}
+.footer{background:var(--tea);color:rgba(255,255,255,.84);padding:56px 0 28px;border-top:1px solid rgba(255,255,255,.1)}
+.footer-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:48px}
+.footer h2{color:var(--white);font-size:30px}
+.footer a{color:var(--white);text-underline-offset:3px}
+.socials{display:flex;gap:12px;margin-top:18px}
+.socials a{width:42px;height:42px;border:1px solid rgba(255,255,255,.35);border-radius:999px;display:grid;place-items:center;text-decoration:none}
+.legal{font-size:14px;color:rgba(255,255,255,.72);margin:20px 0 0}
+.copyright{border-top:1px solid rgba(255,255,255,.14);margin-top:28px;padding-top:20px;font-size:13px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:var(--tea);color:var(--white);padding:12px 18px;border-radius:var(--radius);box-shadow:var(--shadow);opacity:0;pointer-events:none;z-index:200;transition:opacity .2s ease,transform .2s ease}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.overlay{position:fixed;inset:0;background:rgba(27,27,27,.48);z-index:90;opacity:0;pointer-events:none;transition:opacity .2s ease}
+.overlay.show{opacity:1;pointer-events:auto}
+.drawer{position:fixed;right:0;top:0;height:100%;width:min(430px,100%);background:var(--cream);z-index:100;transform:translateX(100%);transition:transform .25s ease;box-shadow:-12px 0 35px rgba(27,27,27,.16);display:flex;flex-direction:column}
+.drawer.open{transform:translateX(0)}
+.drawer-header{padding:20px 20px 14px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(31,61,43,.12)}
+.drawer-header h2{margin:0;font-size:28px}
+.drawer-content{padding:20px;overflow:auto;flex:1}
+.cart-line{display:grid;grid-template-columns:72px 1fr auto;gap:12px;padding:14px 0;border-bottom:1px solid rgba(31,61,43,.12)}
+.cart-line img{width:72px;height:72px;object-fit:cover;border-radius:8px;background:var(--parchment)}
+.cart-name{font-weight:700;font-size:14px;color:var(--tea)}
+.cart-price{font-size:13px;margin-top:3px}
+.qty-controls{display:flex;align-items:center;gap:7px;margin-top:8px}
+.qty-btn{width:32px;height:32px;border:1px solid rgba(31,61,43,.22);background:var(--white);border-radius:8px;color:var(--tea);font-weight:700}
+.qty-value{min-width:24px;text-align:center;font-size:14px}
+.remove-btn{border:0;background:none;text-decoration:underline;color:var(--error);font-size:12px;padding:0;margin-top:6px}
+.cart-footer{padding:18px 20px;border-top:1px solid rgba(31,61,43,.12);background:var(--white)}
+.ship-message{font-size:13px;color:var(--leaf);margin-bottom:8px}
+.ship-track{height:8px;border-radius:999px;background:var(--parchment);overflow:hidden;margin-bottom:18px}
+.ship-fill{height:100%;width:0;background:var(--leaf);transition:width .25s ease}
+.coupon-row{display:grid;grid-template-columns:1fr auto;gap:8px;margin:14px 0}
+.coupon-note{font-size:12px;color:#555;margin-top:-8px}
+.totals{display:grid;gap:8px;font-size:14px}
+.total-row{display:flex;justify-content:space-between;gap:16px}
+.total-row.grand{font-size:19px;font-weight:700;color:var(--tea);padding-top:8px;border-top:1px solid rgba(31,61,43,.12)}
+.modal{position:fixed;left:50%;top:50%;width:min(760px,calc(100% - 32px));max-height:90vh;overflow:auto;transform:translate(-50%,-46%);background:var(--cream);z-index:110;border-radius:var(--radius);box-shadow:0 24px 70px rgba(27,27,27,.25);opacity:0;pointer-events:none;transition:opacity .2s ease,transform .2s ease}
+.modal.open{opacity:1;pointer-events:auto;transform:translate(-50%,-50%)}
+.modal-inner{display:grid;grid-template-columns:1fr 1fr}
+.modal-image{background:var(--parchment);min-height:360px}
+.modal-image img{width:100%;height:100%;object-fit:cover}
+.modal-copy{padding:32px}
+.modal-copy h2{margin-top:4px}
+.modal-close{position:absolute;right:14px;top:14px;width:42px;height:42px;border:0;border-radius:999px;background:var(--white);color:var(--tea);z-index:2}
+.modal-meta{font-size:14px;color:#444}
+.modal-price{font-size:22px;font-weight:700;color:var(--tea);margin:18px 0}
+@media (max-width:1050px){.header-inner{grid-template-columns:auto 1fr auto;gap:16px}.nav{gap:14px}.search{width:180px}.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:800px){.header-inner{grid-template-columns:auto 1fr auto}.nav{display:none}.header-actions{justify-content:flex-end}.search{width:min(52vw,220px)}.trust-grid{grid-template-columns:repeat(2,1fr)}.hero{min-height:520px}.hero-content{padding:72px 0;max-width:560px}.hero::before{background:linear-gradient(90deg,rgba(246,241,231,.97),rgba(246,241,231,.65))}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.section{padding:64px 0}.delivery-box{grid-template-columns:1fr}.review-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}.modal-inner{grid-template-columns:1fr}.modal-image{min-height:300px}}
+@media (max-width:560px){body{font-size:15px}.container{width:min(var(--max),calc(100% - 32px))}.logo{width:145px}.header-inner{min-height:68px}.header-actions{gap:7px}.search-wrap{flex:1}.search{width:100%;min-width:0}.hero{min-height:570px}.hero-content{padding:56px 0}.hero p{font-size:16px}.trust-grid{grid-template-columns:1fr 1fr;gap:18px 10px}.section{padding:48px 0}.section-head{display:block}.shop-controls{grid-template-columns:1fr}.sort-label{justify-content:space-between}.sort-label select{flex:1;max-width:220px}.grid{gap:12px}.card-body{padding:14px}.card h3{font-size:18px}.card-desc{font-size:13px}.price-row{display:block}.card .btn{font-size:14px}.newsletter-form{display:grid}.inline-form{display:grid;grid-template-columns:1fr}.cart-line{grid-template-columns:60px 1fr auto}.cart-line img{width:60px;height:60px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+</style>
+<script type="application/ld+json" id="schema"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="announcement">Free shipping on orders of ₹599+ after discount · GST included in listed prices</div>
+<header class="header">
+  <div class="container header-inner">
+    <a href="#top" aria-label="Mistvale Tea Co. home"><img class="logo" src="images/logo.svg" alt="Mistvale Tea Co."></a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#shop">Shop</a><a href="#delivery">Delivery</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <div class="search-wrap">
+        <label for="search">Search teas</label>
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input class="search" id="search" type="search" autocomplete="off" placeholder="Search teas">
+      </div>
+      <button class="icon-btn" type="button" id="cart-button" aria-label="Open cart" aria-controls="cart" aria-expanded="false">
+        <span aria-hidden="true">🛒</span><span class="cart-count" id="cart-count">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <img class="hero-media" src="images/hero.webp" alt="Misty green tea hills at dawn with a cup of tea in the foreground">
+  <div class="container hero-content">
+    <p class="eyebrow">Mistvale Tea Co.</p>
+    <h1>Hill-grown tea, honestly made.</h1>
+    <p>Quiet mornings start with tea worth slowing down for. Explore malty Assam, floral Darjeeling, fragrant kahwa and gentle herbal blends.</p>
+    <div class="actions"><a class="btn btn-primary" href="#shop">Shop the teas</a></div>
+  </div>
+</section>
+
+<section class="trust" aria-label="Why shop Mistvale">
+  <div class="container trust-grid">
+    <div class="trust-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M5 8h14M6 16h12"/></svg><div><strong>GST included</strong><span>Prices are per pack.</span></div></div>
+    <div class="trust-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M12 4l8 8-8 8"/></svg><div><strong>India delivery</strong><span>Check your pincode below.</span></div></div>
+    <div class="trust-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 11a8 8 0 1 1-2.34-5.66"/><path d="M20 4v7h-7"/></svg><div><strong>7-day returns</strong><span>Unopened packs only.</span></div></div>
+    <div class="trust-item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-7"/><path d="M3 7h18v5H3z"/><path d="M12 7v5"/></svg><div><strong>Gift-ready sampler</strong><span>Wooden box and brewing guide.</span></div></div>
+  </div>
+</section>
+
+<section class="section" id="shop">
+  <div class="container">
+    <div class="section-head">
+      <div><p class="eyebrow">The collection</p><h2>Find your next cup</h2></div>
+      <p>Choose by tea style, search by name or description, then sort the collection your way.</p>
+    </div>
+    <div class="shop-controls">
+      <div class="filters" aria-label="Filter by category">
+        <button class="filter active" type="button" data-category="all">All</button>
+        <button class="filter" type="button" data-category="Black">Black</button>
+        <button class="filter" type="button" data-category="Green">Green</button>
+        <button class="filter" type="button" data-category="Herbal">Herbal</button>
+        <button class="filter" type="button" data-category="Gifts">Gifts</button>
+      </div>
+      <label class="sort-label" for="sort">Sort by
+        <select id="sort">
+          <option value="default">Featured</option>
+          <option value="low">Price: low to high</option>
+          <option value="high">Price: high to low</option>
+          <option value="name">Name</option>
+        </select>
+      </label>
+    </div>
+    <p id="result-status" class="form-message" role="status" aria-live="polite"></p>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section class="section delivery" id="delivery">
+  <div class="container delivery-box">
+    <div><p class="eyebrow">Before you order</p><h2>Check delivery to your pincode</h2><p>Enter a six-digit Indian pincode to see whether we currently deliver there and the estimated delivery time.</p></div>
+    <div class="delivery-form">
+      <div class="field"><label for="pin">Pincode</label><input id="pin" inputmode="numeric" autocomplete="postal-code" maxlength="6" aria-describedby="pin-help pin-result"><span id="pin-help" class="form-message">Example: 734001</span></div>
+      <button class="btn btn-primary" type="button" id="pin-button">Check delivery</button>
+      <div id="pin-result" class="form-message" role="status" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="reviews-heading">
+  <div class="container">
+    <div class="section-head"><div><p class="eyebrow">From our customers</p><h2 id="reviews-heading">A few words from tea drinkers</h2></div></div>
+    <div class="review-grid">
+      <figure class="review"><p>“Best masala chai I have ever had. Tastes like my nani's kitchen.”</p><cite>Ananya, Pune</cite></figure>
+      <figure class="review"><p>“The Darjeeling first flush is so fresh. Packaging was lovely too.”</p><cite>Rohit, Bengaluru</cite></figure>
+      <figure class="review"><p>“Bought the sampler as a gift and now my whole family is hooked.”</p><cite>Meera, Kochi</cite></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section faq" id="faq" aria-labelledby="faq-heading">
+  <div class="container faq-list">
+    <p class="eyebrow">Questions, simply answered</p><h2 id="faq-heading">Frequently asked questions</h2>
+    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">How long does delivery take?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button><div class="faq-a">2 to 5 working days depending on your pincode. Use the delivery check to see yours.</div></div>
+    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">Can I return tea?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button><div class="faq-a">Unopened packs can be returned within 7 days of delivery. Opened tea cannot be returned for hygiene reasons.</div></div>
+    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">How should I store my tea?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button><div class="faq-a">In an airtight container, away from light, heat and strong smells. It tastes best within 6 months of opening.</div></div>
+    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">Is Chamomile &amp; Tulsi caffeine-free?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button><div class="faq-a">Yes, it is a caffeine-free herbal blend.</div></div>
+    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">Do you ship outside India?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button><div class="faq-a">Not yet. We currently deliver within India only.</div></div>
+    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">Can I send tea as a gift?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button><div class="faq-a">Yes. The Tea Lover's Sampler comes in a wooden gift box with a brewing guide.</div></div>
+  </div>
+</section>
+
+<section class="section newsletter" id="newsletter">
+  <div class="container">
+    <p class="eyebrow" style="color:var(--saffron)">A quieter inbox</p>
+    <h2>Join the Tea Club</h2>
+    <p>Get occasional notes from Mistvale. If you use WELCOME10, the 10% discount applies to eligible items on orders with a subtotal of at least ₹399, capped at ₹150.</p>
+    <form class="newsletter-form" id="newsletter-form" novalidate>
+      <label for="nl-email" class="sr-only">Email address</label>
+      <input id="nl-email" type="email" autocomplete="email" placeholder="Email address" required aria-describedby="nl-msg">
+      <button class="btn btn-secondary" type="submit">Subscribe</button>
+    </form>
+    <div id="nl-msg" class="form-message" role="status" aria-live="polite"></div>
+  </div>
+</section>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="container footer-grid">
+    <div>
+      <h2>Mistvale Tea Co.</h2>
+      <p>Hill-grown tea, honestly made.</p>
+      <div class="socials" aria-label="Social links">
+        <a href="https://instagram.com/mistvale.example" aria-label="Mistvale on Instagram">ig</a>
+      </div>
+    </div>
+    <div>
+      <p><strong>Contact</strong></p>
+      <p>14 Hill Cart Road, Siliguri, West Bengal 734001, India<br><a href="tel:+919000012345">+91 90000 12345</a><br><a href="mailto:hello@mistvale.example">hello@mistvale.example</a></p>
+      <!-- LEGAL: approved wording, do not edit (ref MV-LGL-07) -->
+      <p class="legal">All prices are inclusive of GST. Returns are accepted within 7 days of delivery on unopened packs only; opened tea cannot be returned for hygiene reasons. Tea colour and flavour may vary slightly between harvests.</p>
+      <p class="legal">&copy; 2020 MistVale. All right reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="cart" aria-label="Shopping cart" aria-hidden="true">
+  <div class="drawer-header"><h2>Your cart</h2><button class="icon-btn" type="button" id="close-cart" aria-label="Close cart">×</button></div>
+  <div class="drawer-content">
+    <div id="cart-items"></div>
+  </div>
+  <div class="cart-footer">
+    <div id="ship-msg" class="ship-message"></div>
+    <div class="ship-track" aria-hidden="true"><div class="ship-fill" id="ship-fill"></div></div>
+    <div class="coupon-row">
+      <label class="sr-only" for="coupon">Coupon code</label>
+      <input id="coupon" type="text" autocomplete="off" placeholder="Coupon code">
+      <button class="btn btn-secondary" type="button" id="apply-coupon">Apply</button>
+    </div>
+    <div class="coupon-note">WELCOME10: 10% off eligible items, minimum subtotal ₹399, maximum discount ₹150.</div>
+    <div id="coupon-msg" class="form-message" role="status" aria-live="polite"></div>
+    <div id="totals" class="totals"></div>
+    <button class="btn btn-primary" type="button" id="checkout-button" style="width:100%;margin-top:16px">Checkout</button>
+  </div>
+</aside>
+
+<div class="modal" id="quickview" role="dialog" aria-modal="true" aria-labelledby="qv-title" aria-hidden="true">
+  <button class="modal-close" type="button" id="qv-close" aria-label="Close quick view">×</button>
+  <div class="modal-inner">
+    <div class="modal-image"><img id="qv-image" src="" alt=""></div>
+    <div class="modal-copy">
+      <p id="qv-category" class="eyebrow"></p>
+      <h2 id="qv-title"></h2>
+      <p id="qv-desc" class="modal-meta"></p>
+      <p id="qv-rating" class="rating"></p>
+      <p id="qv-price" class="modal-price"></p>
+      <button class="btn btn-primary" type="button" id="qv-add">Add to cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- Checkout contract: the backend reads this form. Do not rename it or its fields. -->
+<form id="checkout-form" action="https://mistvale.example/cart/checkout" method="POST" style="display:none">
+  <input type="hidden" name="items">
+  <input type="hidden" name="coupon">
+</form>
+
+<style>
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+</style>
+
+<script>
+const PRODUCTS = [
+  { id: 101, name: "Assam Breakfast Black Tea", category: "Black", price: 349, stock: 40, image: "images/p101.webp", desc: "Strong, malty CTC tea from Upper Assam estates. Perfect with milk and a little sugar in the morning." },
+  { id: 102, name: "Darjeeling First Flush", category: "Black", price: 1299, stock: 12, image: "images/p102.webp", desc: "Delicate, floral spring harvest leaves with a muscatel note. Best without milk.", rating: 4.8, reviews: 128 },
+  { id: 103, name: "Kashmiri Kahwa", category: "Green", price: 549, stock: 25, image: "images/p103.webp", desc: "Green tea with saffron, cardamom, cinnamon and almond flakes." },
+  { id: 104, name: "Masala Chai Blend", category: "Black", price: 399, stock: 60, image: "images/p104.webp", desc: "Bold Assam leaves with ginger, cardamom, clove and black pepper. Our bestseller.", rating: 4.7, reviews: 342 },
+  { id: 105, name: "Nilgiri Green Tea", category: "Green", price: 449, stock: 30, image: "images/p105.webp", desc: "Smooth, grassy green tea from the Blue Mountains of the south." },
+  { id: 106, name: "Chamomile & Tulsi", category: "Herbal", price: 499, stock: 18, image: "images/p106.webp", desc: "Caffeine-free calming blend of chamomile flowers and holy basil." },
+  { id: 107, name: "Hibiscus Rose Infusion", category: "Herbal", price: 599, stock: 0, image: "images/p107.webp", desc: "Tangy hibiscus with rose petals. Lovely iced." },
+  { id: 108, name: "Tea Lover's Sampler Gift Box", category: "Gifts", price: 1899, stock: 9, image: "images/p108.webp", desc: "Six of our favourite teas in a wooden gift box with a brewing guide." }
+];
+
+// ---- API START: simulated store backend. DO NOT CHANGE this block. ----
+const API = {
+  // Searches names and descriptions. Returns a Promise of matching product ids.
+  // Like a real server, response time varies with the query.
+  search: function (query) {
+    const q = String(query).trim().toLowerCase();
+    const delay = Math.max(120, 900 - q.length * 140);
+    return new Promise(function (resolve) {
+      setTimeout(function () {
+        resolve(PRODUCTS.filter(function (p) {
+          return p.name.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q);
+        }).map(function (p) { return p.id; }));
+      }, delay);
+    });
+  },
+  // Delivery estimate for an Indian pincode. Resolves { serviceable, days }.
+  // Rejects with Error('INVALID_PINCODE') for anything that is not a valid 6-digit pincode.
+  checkPincode: function (pin) {
+    const zones = { '73': 2, '70': 3, '71': 3, '11': 4, '40': 4, '56': 5, '60': 5, '50': 5 };
+    return new Promise(function (resolve, reject) {
+      setTimeout(function () {
+        if (!/^[1-9][0-9]{5}$/.test(String(pin))) return reject(new Error('INVALID_PINCODE'));
+        const days = zones[String(pin).slice(0, 2)];
+        resolve(days ? { serviceable: true, days: days } : { serviceable: false });
+      }, 400 + Math.random() * 600);
+    });
+  }
+};
+// ---- API END ----
+
+const FREE_SHIPPING_THRESHOLD = 599;
+const MAX_PER_PRODUCT = 5;
+const COUPON_CODE = 'WELCOME10';
+const COUPON_MIN_SUBTOTAL = 399;
+const COUPON_CAP = 150;
+
+let cart = [];
+let couponCode = '';
+let currentCategory = 'all';
+let currentSort = 'default';
+let searchIds = PRODUCTS.map(p => p.id);
+let searchRequest = 0;
+let activeQuickView = null;
+let toastTimer = null;
+let wishlist = JSON.parse(localStorage.getItem('mv_wishlist') || '[]');
+
+const $ = (selector) => document.querySelector(selector);
+const $$ = (selector) => Array.from(document.querySelectorAll(selector));
+const money = (value, round = false) => {
+  const amount = round ? Math.round(value) : value;
+  return '₹' + amount.toLocaleString('en-IN', {
+    minimumFractionDigits: Number.isInteger(amount) ? 0 : 2,
+    maximumFractionDigits: 2
+  });
+};
+
+function productById(id) {
+  return PRODUCTS.find(p => p.id === Number(id));
+}
+
+function normaliseCart() {
+  let stored = [];
+  try { stored = JSON.parse(localStorage.getItem('mv_cart') || '[]'); } catch (_) { stored = []; }
+  if (!Array.isArray(stored)) stored = [];
+  const cleaned = [];
+  stored.forEach(item => {
+    const p = productById(item.id);
+    if (!p || p.stock <= 0) return;
+    const qty = Math.max(1, Math.min(MAX_PER_PRODUCT, p.stock, Number.parseInt(item.qty, 10) || 1));
+    const existing = cleaned.find(c => c.id === p.id);
+    if (existing) existing.qty = Math.min(MAX_PER_PRODUCT, p.stock, existing.qty + qty);
+    else cleaned.push({ id:p.id, qty });
+  });
+  return cleaned;
+}
+
+function saveCart() {
+  localStorage.setItem('mv_cart', JSON.stringify(cart));
+}
+
+function getSubtotal() {
+  return cart.reduce((sum, item) => {
+    const p = productById(item.id);
+    return sum + (p ? p.price * item.qty : 0);
+  }, 0);
+}
+
+function getDiscount() {
+  if (couponCode !== COUPON_CODE || getSubtotal() < COUPON_MIN_SUBTOTAL) return 0;
+  const eligible = cart.reduce((sum, item) => {
+    const p = productById(item.id);
+    return p && p.category !== 'Gifts' ? sum + p.price * item.qty : sum;
+  }, 0);
+  return Math.min(COUPON_CAP, eligible * 0.10);
+}
+
+function getShipping() {
+  return Math.max(0, getSubtotal() - getDiscount()) >= FREE_SHIPPING_THRESHOLD ? 0 : 49;
+}
+
+function getTotal() {
+  return getSubtotal() - getDiscount() + getShipping();
+}
+
+function updateCartCount() {
+  const count = cart.reduce((sum, item) => sum + item.qty, 0);
+  $('#cart-count').textContent = count;
+}
+
+function showToast(message) {
+  const toast = $('#toast');
+  toast.textContent = message;
+  toast.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
+}
+
+function safeText(value) {
+  return String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+}
+
+function compareProducts(a,b) {
+  // Sold-out products always stay last, regardless of selected sort.
+  if ((a.stock === 0) !== (b.stock === 0)) return a.stock === 0 ? 1 : -1;
+  if (currentSort === 'low') return a.price - b.price;
+  if (currentSort === 'high') return b.price - a.price;
+  if (currentSort === 'name') return a.name.localeCompare(b.name);
+  return PRODUCTS.indexOf(a) - PRODUCTS.indexOf(b);
+}
+
+function getVisibleProducts() {
+  const allowed = new Set(searchIds);
+  return PRODUCTS.filter(p => (currentCategory === 'all' || p.category === currentCategory) && allowed.has(p.id)).slice().sort(compareProducts);
+}
+
+function renderProducts() {
+  const list = getVisibleProducts();
+  const grid = $('#grid');
+  if (!list.length) {
+    grid.innerHTML = '<div class="empty"><h3>No teas found</h3><p>Try another search or category.</p></div>';
+  } else {
+    grid.innerHTML = list.map(p => {
+      const saved = wishlist.includes(p.id);
+      const soldOut = p.stock === 0;
+      const rating = p.rating ? '★★★★★ ' + p.rating + ' (' + p.reviews + ')' : 'No customer rating provided';
+      return `
+        <article class="card">
+          <div class="card-media">
+            <img src="${p.image}" alt="${safeText(p.name)} pack on a calm tea-toned background" loading="lazy" width="900" height="900">
+            ${soldOut ? '<span class="badge">Sold out</span>' : ''}
+            <button class="wish ${saved ? 'is-saved' : ''}" type="button" data-wish="${p.id}" aria-label="${saved ? 'Remove ' : 'Save '}${safeText(p.name)} ${saved ? 'from wishlist' : 'to wishlist'}" aria-pressed="${saved}">
+              <span aria-hidden="true">${saved ? '♥' : '♡'}</span>
+            </button>
+          </div>
+          <div class="card-body">
+            <div class="category">${safeText(p.category)}</div>
+            <h3>${safeText(p.name)}</h3>
+            <div class="rating" aria-label="${p.rating ? 'Rated ' + p.rating + ' out of 5 from ' + p.reviews + ' reviews' : 'No rating provided'}">${rating}</div>
+            <p class="card-desc">${safeText(p.desc)}</p>
+            <div class="price-row"><span class="price">${money(p.price)}</span></div>
+            <button class="btn btn-secondary" type="button" data-qv="${p.id}" ${soldOut ? 'disabled' : ''}>${soldOut ? 'Sold out' : 'Quick view'}</button>
+          </div>
+        </article>`;
+    }).join('');
+  }
+  $('#result-status').textContent = list.length ? list.length + ' product' + (list.length === 1 ? '' : 's') + ' shown' : 'No products shown';
+}
+
+function addToCart(id) {
+  const p = productById(id);
+  if (!p || p.stock <= 0) { showToast('This tea is sold out.'); return; }
+  const item = cart.find(c => c.id === p.id);
+  if (item) {
+    if (item.qty >= Math.min(MAX_PER_PRODUCT, p.stock)) {
+      showToast('You can add up to 5 packs of this tea.');
+      return;
+    }
+    item.qty += 1;
+  } else {
+    cart.push({id:p.id, qty:1});
+  }
+  saveCart();
+  updateCartCount();
+  renderCart();
+  showToast(p.name + ' added to your cart.');
+}
+
+function setCartQuantity(id, nextQty) {
+  const p = productById(id);
+  const item = cart.find(c => c.id === Number(id));
+  if (!p || !item) return;
+  const max = Math.min(MAX_PER_PRODUCT, p.stock);
+  item.qty = Math.max(0, Math.min(max, Math.trunc(Number(nextQty) || 0)));
+  if (item.qty === 0) cart = cart.filter(c => c.id !== p.id);
+  saveCart();
+  updateCartCount();
+  renderCart();
+}
+
+function removeItem(id) {
+  cart = cart.filter(c => c.id !== Number(id));
+  saveCart();
+  updateCartCount();
+  renderCart();
+}
+
+function renderCart() {
+  const box = $('#cart-items');
+  if (!cart.length) {
+    box.innerHTML = '<div class="empty"><h3>Your cart is empty</h3><p>Add a tea to see your order summary here.</p><a class="btn btn-primary" href="#shop" id="empty-shop">Shop the teas</a></div>';
+  } else {
+    box.innerHTML = cart.map(item => {
+      const p = productById(item.id);
+      return `
+      <div class="cart-line">
+        <img src="${p.image}" alt="">
+        <div>
+          <div class="cart-name">${safeText(p.name)}</div>
+          <div class="cart-price">${money(p.price)} per pack</div>
+          <div class="qty-controls" aria-label="Quantity for ${safeText(p.name)}">
+            <button class="qty-btn" type="button" data-minus="${p.id}" aria-label="Decrease quantity">−</button>
+            <span class="qty-value" aria-live="polite">${item.qty}</span>
+            <button class="qty-btn" type="button" data-plus="${p.id}" aria-label="Increase quantity">+</button>
+          </div>
+          <button class="remove-btn" type="button" data-remove="${p.id}">Remove</button>
+        </div>
+        <strong>${money(p.price * item.qty)}</strong>
+      </div>`;
+    }).join('');
+  }
+
+  const subtotal = getSubtotal();
+  const discount = getDiscount();
+  const shipping = getShipping();
+  const remaining = Math.max(0, FREE_SHIPPING_THRESHOLD - (subtotal - discount));
+  $('#ship-msg').textContent = shipping === 0 ? 'You have unlocked free shipping.' : 'Add ' + money(remaining) + ' more after discount for free shipping.';
+  $('#ship-fill').style.width = Math.min(100, ((subtotal - discount) / FREE_SHIPPING_THRESHOLD) * 100) + '%';
+  $('#coupon').value = couponCode;
+  const couponMessage = couponCode && couponCode !== COUPON_CODE
+    ? 'That coupon code is not recognised.'
+    : (couponCode === COUPON_CODE && discount === 0
+      ? 'WELCOME10 needs a subtotal of at least ₹399 and applies only to non-gift items.'
+      : (discount ? 'WELCOME10 applied: ' + money(discount) + ' off eligible items.' : ''));
+  $('#coupon-msg').textContent = couponMessage;
+  $('#coupon-msg').className = 'form-message ' + (discount ? 'success' : (couponMessage ? 'error' : ''));
+  $('#totals').innerHTML = `
+    <div class="total-row"><span>Subtotal</span><strong>${money(subtotal)}</strong></div>
+    <div class="total-row"><span>Shipping</span><strong>${shipping ? money(shipping) : 'Free'}</strong></div>
+    <div class="total-row"><span>Discount</span><strong>−${money(discount)}</strong></div>
+    <div class="total-row grand"><span>Total</span><strong>${money(getTotal(), true)}</strong></div>
+  `;
+  $('#checkout-button').disabled = !cart.length;
+}
+
+function openCart() {
+  $('#cart').classList.add('open');
+  $('#overlay').classList.add('show');
+  $('#cart').setAttribute('aria-hidden','false');
+  $('#cart-button').setAttribute('aria-expanded','true');
+  document.body.classList.add('no-scroll');
+  $('#close-cart').focus();
+}
+
+function closeCart() {
+  $('#cart').classList.remove('open');
+  $('#overlay').classList.remove('show');
+  $('#cart').setAttribute('aria-hidden','true');
+  $('#cart-button').setAttribute('aria-expanded','false');
+  document.body.classList.remove('no-scroll');
+  $('#cart-button').focus();
+}
+
+function openQuickView(id) {
+  const p = productById(id);
+  if (!p) return;
+  activeQuickView = p.id;
+  $('#qv-image').src = p.image;
+  $('#qv-image').alt = p.name + ' pack';
+  $('#qv-category').textContent = p.category;
+  $('#qv-title').textContent = p.name;
+  $('#qv-desc').textContent = p.desc;
+  $('#qv-rating').textContent = p.rating ? '★★★★★ ' + p.rating + ' (' + p.reviews + ')' : 'No customer rating provided';
+  $('#qv-price').textContent = money(p.price);
+  $('#qv-add').disabled = p.stock <= 0;
+  $('#qv-add').textContent = p.stock <= 0 ? 'Sold out' : 'Add to cart';
+  $('#quickview').classList.add('open');
+  $('#quickview').setAttribute('aria-hidden','false');
+  $('#overlay').classList.add('show');
+  document.body.classList.add('no-scroll');
+  $('#qv-close').focus();
+}
+
+function closeQuickView() {
+  $('#quickview').classList.remove('open');
+  $('#quickview').setAttribute('aria-hidden','true');
+  $('#overlay').classList.remove('show');
+  document.body.classList.remove('no-scroll');
+  activeQuickView = null;
+}
+
+function toggleWishlist(id) {
+  id = Number(id);
+  wishlist = wishlist.includes(id) ? wishlist.filter(x => x !== id) : wishlist.concat(id);
+  localStorage.setItem('mv_wishlist', JSON.stringify(wishlist));
+  renderProducts();
+}
+
+async function refreshSearch(query) {
+  const request = ++searchRequest;
+  $('#result-status').textContent = 'Searching…';
+  const ids = await API.search(query);
+  if (request !== searchRequest) return;
+  searchIds = ids;
+  renderProducts();
+}
+
+function applyCoupon() {
+  const typed = $('#coupon').value.trim().toUpperCase();
+  if (!typed) {
+    couponCode = '';
+    $('#coupon-msg').textContent = '';
+    renderCart();
+    return;
+  }
+  if (typed !== COUPON_CODE) {
+    couponCode = typed;
+    $('#coupon-msg').className = 'form-message error';
+    $('#coupon-msg').textContent = 'That coupon code is not recognised.';
+    renderCart();
+    return;
+  }
+  couponCode = COUPON_CODE;
+  if (getSubtotal() < COUPON_MIN_SUBTOTAL) {
+    $('#coupon-msg').className = 'form-message error';
+    $('#coupon-msg').textContent = 'WELCOME10 applies when the cart subtotal is at least ₹399.';
+  } else {
+    $('#coupon-msg').className = 'form-message success';
+    $('#coupon-msg').textContent = 'WELCOME10 is ready for eligible items.';
+  }
+  renderCart();
+}
+
+async function checkPin() {
+  const pin = $('#pin').value.trim();
+  const button = $('#pin-button');
+  const result = $('#pin-result');
+  if (!/^[1-9][0-9]{5}$/.test(pin)) {
+    result.className = 'form-message error';
+    result.textContent = 'Enter a valid six-digit pincode.';
+    return;
+  }
+  button.disabled = true;
+  result.className = 'form-message';
+  result.textContent = 'Checking…';
+  try {
+    const response = await API.checkPincode(pin);
+    if (response.serviceable) {
+      result.className = 'form-message success';
+      result.textContent = 'Delivery is available in about ' + response.days + ' working days.';
+    } else {
+      result.className = 'form-message error';
+      result.textContent = 'This pincode is not serviceable yet. Please try another pincode.';
+    }
+  } catch (error) {
+    result.className = 'form-message error';
+    result.textContent = error && error.message === 'INVALID_PINCODE' ? 'Enter a valid six-digit pincode.' : 'We could not check that pincode. Please try again.';
+  } finally {
+    button.disabled = false;
+  }
+}
+
+function checkout() {
+  if (!cart.length) return;
+  const form = $('#checkout-form');
+  form.elements.items.value = JSON.stringify(cart.map(item => ({id:item.id,qty:item.qty})));
+  form.elements.coupon.value = couponCode === COUPON_CODE && getDiscount() > 0 ? COUPON_CODE : '';
+  form.submit();
+}
+
+function setupSchema() {
+  const products = PRODUCTS.map(p => {
+    const item = {
+      '@context':'https://schema.org','@type':'Product','name':p.name,'description':p.desc,
+      'image':'https://mistvale.example/' + p.image,
+      'offers':{'@type':'Offer','priceCurrency':'INR','price':String(p.price),'availability':p.stock > 0 ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock'}
+    };
+    if (p.rating) item.aggregateRating = {'@type':'AggregateRating','ratingValue':p.rating,'reviewCount':p.reviews};
+    return item;
+  });
+  const schema = {
+    '@context':'https://schema.org','@graph':[
+      {'@type':'Organization','name':'Mistvale Tea Co.','url':'https://mistvale.example/','logo':'https://mistvale.example/images/logo.svg','email':'hello@mistvale.example','telephone':'+91 90000 12345','address':{'@type':'PostalAddress','streetAddress':'14 Hill Cart Road','addressLocality':'Siliguri','addressRegion':'West Bengal','postalCode':'734001','addressCountry':'IN'}},
+      ...products,
+      {'@type':'FAQPage','mainEntity':[
+        ['How long does delivery take?','2 to 5 working days depending on your pincode. Use the delivery check to see yours.'],
+        ['Can I return tea?','Unopened packs can be returned within 7 days of delivery. Opened tea cannot be returned for hygiene reasons.'],
+        ['How should I store my tea?','In an airtight container, away from light, heat and strong smells. It tastes best within 6 months of opening.'],
+        ['Is Chamomile & Tulsi caffeine-free?','Yes, it is a caffeine-free herbal blend.'],
+        ['Do you ship outside India?','Not yet. We currently deliver within India only.'],
+        ['Can I send tea as a gift?', "Yes. The Tea Lover's Sampler comes in a wooden gift box with a brewing guide."]
+      ].map(([name,text]) => ({'@type':'Question','name':name,'acceptedAnswer':{'@type':'Answer','text':text}}))
+      }
+    ]
+  };
+  $('#schema').textContent = JSON.stringify(schema);
+}
+
+document.addEventListener('click', event => {
+  const wish = event.target.closest('[data-wish]');
+  if (wish) { toggleWishlist(wish.dataset.wish); return; }
+  const qv = event.target.closest('[data-qv]');
+  if (qv) { openQuickView(qv.dataset.qv); return; }
+  const plus = event.target.closest('[data-plus]');
+  if (plus) { const item=cart.find(c=>c.id===Number(plus.dataset.plus)); setCartQuantity(plus.dataset.plus, item.qty+1); return; }
+  const minus = event.target.closest('[data-minus]');
+  if (minus) { const item=cart.find(c=>c.id===Number(minus.dataset.minus)); setCartQuantity(minus.dataset.minus, item.qty-1); return; }
+  const remove = event.target.closest('[data-remove]');
+  if (remove) { removeItem(remove.dataset.remove); return; }
+  if (event.target.id === 'empty-shop') closeCart();
+});
+
+$$('.filter').forEach(button => button.addEventListener('click', () => {
+  currentCategory = button.dataset.category;
+  $$('.filter').forEach(b => b.classList.toggle('active', b === button));
+  renderProducts();
+}));
+
+$('#sort').addEventListener('change', event => {
+  currentSort = event.target.value;
+  renderProducts();
+});
+
+let searchTimer;
+$('#search').addEventListener('input', event => {
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(() => refreshSearch(event.target.value), 140);
+});
+
+$('#cart-button').addEventListener('click', openCart);
+$('#close-cart').addEventListener('click', closeCart);
+$('#overlay').addEventListener('click', () => { closeCart(); closeQuickView(); });
+$('#qv-close').addEventListener('click', closeQuickView);
+$('#qv-add').addEventListener('click', () => {
+  if (activeQuickView) {
+    addToCart(activeQuickView);
+    closeQuickView();
+    openCart();
+  }
+});
+$('#apply-coupon').addEventListener('click', applyCoupon);
+$('#coupon').addEventListener('keydown', event => { if (event.key === 'Enter') { event.preventDefault(); applyCoupon(); } });
+$('#checkout-button').addEventListener('click', checkout);
+$('#pin-button').addEventListener('click', checkPin);
+$('#pin').addEventListener('keydown', event => { if (event.key === 'Enter') checkPin(); });
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') {
+    if ($('#quickview').classList.contains('open')) closeQuickView();
+    else if ($('#cart').classList.contains('open')) closeCart();
+  }
+});
+
+$$('.faq-q').forEach(button => button.addEventListener('click', () => {
+  const item = button.closest('.faq-item');
+  const open = item.classList.toggle('open');
+  button.setAttribute('aria-expanded', String(open));
+}));
+
+$('#newsletter-form').addEventListener('submit', event => {
+  event.preventDefault();
+  const input = $('#nl-email');
+  const msg = $('#nl-msg');
+  if (!input.checkValidity()) {
+    msg.className='form-message error';
+    msg.textContent='Enter a valid email address.';
+    input.focus();
+    return;
+  }
+  msg.className='form-message success';
+  msg.textContent='Thanks for joining the Tea Club.';
+  input.value='';
+});
+
+cart = normaliseCart();
+saveCart();
+updateCartCount();
+renderProducts();
+renderCart();
+setupSchema();
+</script>
+</body>
+</html>
